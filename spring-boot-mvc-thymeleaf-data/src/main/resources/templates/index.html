@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Add your Score!</title>
 </head>
-    <h1>elo elo </h1>
+    <h1>Time registration</h1>
+    <form action="#" method="post" th:action="@{/save}" th:object="${timeData}">
+        <p>First name <input type="text" th:field="*{firstName}"/></p>
+        <p>Last name <input type="text" th:field="*{lastName}"/></p>
+        <p>Time</p>
+        <p>
+            H:<input type="number" th:field="*{hours}" min="0"/>
+            M:<input type="number" th:field="*{hours}" min="0" max="59"/>
+            S:<input type="number" th:field="*{seconds}" min="0" max="59"/>
+        </p>
+
+        <input type="submit" value="Save" />
+    </form>
+<a th:href="@{/show}">Show all times</a>
 
 <body>
 

@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.List;
 
 @Entity
 public class TimeData {
@@ -16,6 +17,7 @@ public class TimeData {
     private int hours;
     private int minutes;
     private int seconds;
+
 
 
     public TimeData(){};

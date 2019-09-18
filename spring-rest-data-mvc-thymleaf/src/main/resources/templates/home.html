@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cities Manager</title>
+</head>
+<body>
+    <h1>Add your city:</h1>
+    <form th:action="@{/cities}" th:object="${cityModel}" method="post">
+        <input type="text" th:field="*{name}" placeholder="City name..."><br>
+        <input type="number" th:field="*{population}" placeholder="City population..."><br>
+        <input type="submit", value="Add City">
+    </form>
+
+    <a th:href="@{/cities}">See all added cities</a>
+</body>
+</html>

@@ -1,2 +1,2 @@
 # Java-Spring-Course
-Basic applications in Spring. 
+Basic web applications using Spring Boot, Spring Data, Hibernate, Thymeleaf.  
